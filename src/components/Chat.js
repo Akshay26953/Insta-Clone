@@ -4,6 +4,8 @@ import { Avatar, IconButton } from "@mui/material";
 import React from "react";
 import "./Chat.css";
 import MoreVert from "@mui/icons-material/MoreVert";
+import InsertEmoticonIcon from '@mui/icons-material/InsertEmoticon';
+import MicIcon from '@mui/icons-material/Mic';
 
 function Chat() {
   return (
@@ -37,6 +39,14 @@ function Chat() {
           This is msg
           <span className="chat_timestamp">{new Date().toUTCString()}</span>
         </p>
+      </div>
+      <div className="chat_footer">
+        <InsertEmoticonIcon/>
+        <form>
+          <input type="text" placeholder="Type a message" />
+          <button type="submit">Send a message</button>
+          <MicIcon/>
+        </form>
       </div>
     </div>
   );
